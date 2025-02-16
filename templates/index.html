@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+        <label for="docker_image">Docker image</label>
+        <br>
+        <input type="text" name="docker_image"
+               placeholder="Specify the docker image wanted"
+               value="{{ request.form['docker_image'] }}"></input>
+        <br>
+
+        <label for="docker_command">Docker command</label>
+        <br>
+        <textarea name="command"
+                  placeholder="Docker command to execute"
+                  rows="15"
+                  cols="15"
+                  >{{ request.form['command'] }}</textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
